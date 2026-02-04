@@ -1,6 +1,7 @@
 #!/bin/bash
 # 에이전트 작업 완료 시 로그 기록 + 결과물 저장
 # SubagentStop 이벤트에서 호출됨
+# 모든 결과물은 .md로 저장 (HR팀 문서변환 에이전트가 워드/엑셀로 변환)
 
 set -euo pipefail
 
@@ -25,7 +26,12 @@ RESULT=$(echo "$INPUT" | jq -r '.result // ""' 2>/dev/null)
 AGENT_NAME=$(echo "$AGENT_TYPE" | sed 's/.*://')
 
 # 팀 추출 (research-researcher-kang-jihyun -> research)
-TEAM=$(echo "$AGENT_NAME" | cut -d'-' -f1)
+# verify가 포함된 경우 research-verify 같은 형태로 추출
+if echo "$AGENT_NAME" | grep -q "verify"; then
+    TEAM=$(echo "$AGENT_NAME" | sed 's/\(.*-verify\).*/\1/')
+else
+    TEAM=$(echo "$AGENT_NAME" | cut -d'-' -f1)
+fi
 
 # 현재 시간
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
@@ -45,69 +51,37 @@ if [ -n "$RESULT" ] && [ "$RESULT" != "null" ] && [ ${#RESULT} -gt 50 ]; then
     TEAM_OUTPUT_DIR="${OUTPUT_BASE}/${TEAM}"
     mkdir -p "$TEAM_OUTPUT_DIR"
 
-    # 팀별 파일 형식 결정
-    case "$TEAM" in
-        research|debate|verification|research-verify|debate-verify|marketing-verify)
-            # 마크다운 저장
-            OUTPUT_FILE="${TEAM_OUTPUT_DIR}/${FILE_TIMESTAMP}_${AGENT_NAME}.md"
-            cat > "$OUTPUT_FILE" << MARKDOWN
-# ${AGENT_NAME} 작업 결과
+    # 모든 팀 결과물을 마크다운으로 저장
+    OUTPUT_FILE="${TEAM_OUTPUT_DIR}/${FILE_TIMESTAMP}_${AGENT_NAME}.md"
 
-**생성일시**: ${TIMESTAMP}
-**에이전트**: ${AGENT_NAME}
-**팀**: ${TEAM}
+    # 팀별 이모지 결정
+    case "$TEAM" in
+        research) EMOJI="🔍" ;;
+        debate) EMOJI="💬" ;;
+        marketing) EMOJI="📢" ;;
+        *verify*) EMOJI="✅" ;;
+        hr) EMOJI="👔" ;;
+        *) EMOJI="📋" ;;
+    esac
+
+    cat > "$OUTPUT_FILE" << MARKDOWN
+# ${EMOJI} ${AGENT_NAME} 작업 결과
+
+| 항목 | 내용 |
+|------|------|
+| **생성일시** | ${TIMESTAMP} |
+| **에이전트** | ${AGENT_NAME} |
+| **팀** | ${TEAM} |
 
 ---
 
 ${RESULT}
+
+---
+
+> 📄 이 파일은 자동 생성되었습니다.
+> 워드/엑셀 변환이 필요하면 HR팀 문서변환 에이전트(최예진)를 호출하세요.
 MARKDOWN
-
-            # pandoc으로 워드 변환 시도
-            if command -v pandoc &> /dev/null; then
-                DOCX_FILE="${TEAM_OUTPUT_DIR}/${FILE_TIMESTAMP}_${AGENT_NAME}.docx"
-                pandoc "$OUTPUT_FILE" -o "$DOCX_FILE" 2>/dev/null && OUTPUT_FILE="$DOCX_FILE" || true
-            fi
-            ;;
-
-        marketing)
-            # HTML로 저장 (이미지 포함 가능)
-            OUTPUT_FILE="${TEAM_OUTPUT_DIR}/${FILE_TIMESTAMP}_${AGENT_NAME}.html"
-            cat > "$OUTPUT_FILE" << HTML
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>${AGENT_NAME} 결과물</title>
-    <style>
-        body { font-family: 'Apple SD Gothic Neo', sans-serif; max-width: 900px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
-        .container { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .header { border-bottom: 3px solid #007bff; padding-bottom: 15px; margin-bottom: 25px; }
-        h1 { color: #333; margin: 0; }
-        .meta { color: #666; font-size: 14px; margin-top: 10px; }
-        .content { line-height: 1.8; }
-        img { max-width: 100%; height: auto; border-radius: 8px; margin: 15px 0; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>📢 ${AGENT_NAME}</h1>
-            <p class="meta">생성일시: ${TIMESTAMP}</p>
-        </div>
-        <div class="content">
-${RESULT}
-        </div>
-    </div>
-</body>
-</html>
-HTML
-            ;;
-
-        *)
-            OUTPUT_FILE="${TEAM_OUTPUT_DIR}/${FILE_TIMESTAMP}_${AGENT_NAME}.md"
-            echo "$RESULT" > "$OUTPUT_FILE"
-            ;;
-    esac
 fi
 
 # 특수문자 이스케이프 (CSV 호환)
