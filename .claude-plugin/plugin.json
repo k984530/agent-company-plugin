@@ -5,9 +5,14 @@
   "author": {
     "name": "Seminar Team"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k984530/agent-company-plugin.git"
+  },
+  "homepage": "https://github.com/k984530/agent-company-plugin",
   "commands": "./commands/",
   "agents": "./agents/",
   "hooks": "./hooks/hooks.json",
-  "keywords": ["agent", "company", "management", "team", "collaboration"],
+  "keywords": ["agent", "company", "management", "team", "collaboration", "non-developer", "natural-language"],
   "license": "MIT"
 }
