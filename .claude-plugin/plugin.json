@@ -1,14 +1,12 @@
 {
   "name": "agent-company",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "AI 에이전트 회사를 운영하고 관리하는 플러그인 - 비개발자도 자연어 커맨드로 에이전트를 고용, 해고, 승진시키고 팀 협업을 시작할 수 있습니다",
   "author": {
     "name": "Seminar Team"
   },
   "repository": "https://github.com/k984530/agent-company-plugin",
   "homepage": "https://github.com/k984530/agent-company-plugin",
-  "commands": "./commands",
-  "agents": "./agents",
   "hooks": "./hooks/hooks.json",
   "keywords": ["agent", "company", "management", "team", "collaboration", "non-developer", "natural-language"],
   "license": "MIT"
