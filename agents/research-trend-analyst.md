@@ -1,12 +1,16 @@
 ---
-name: trend-analyst
-description: |
-  Use this agent when you need to analyze trends and derive insights.
+name: research-trend-analyst
+description: Use this agent when you need to analyze trends and derive insights. Examples:
 
-  <example>
-  user: "올해 마케팅 트렌드를 분석해줘"
-  assistant: "trend-analyst 에이전트를 사용하여 트렌드를 분석합니다."
-  </example>
+<example>
+Context: User wants trend analysis
+user: "올해 마케팅 트렌드를 분석해줘"
+assistant: "trend-analyst 에이전트를 사용하여 트렌드를 분석합니다."
+<commentary>
+User needs trend analysis, trigger trend-analyst agent.
+</commentary>
+</example>
+
 model: opus
 color: cyan
 tools: ["WebSearch", "Read", "Write"]

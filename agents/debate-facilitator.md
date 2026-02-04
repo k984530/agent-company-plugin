@@ -1,12 +1,16 @@
 ---
-name: facilitator
-description: |
-  Use this agent when you need to facilitate a discussion or organize opinions.
+name: debate-facilitator
+description: Use this agent when you need to facilitate a discussion or organize opinions. Examples:
 
-  <example>
-  user: "이 주제에 대해 토론을 진행해줘"
-  assistant: "facilitator 에이전트를 사용하여 토론을 진행합니다."
-  </example>
+<example>
+Context: User wants to start a debate
+user: "이 주제에 대해 토론을 진행해줘"
+assistant: "facilitator 에이전트를 사용하여 토론을 진행합니다."
+<commentary>
+User needs discussion facilitation, trigger facilitator agent.
+</commentary>
+</example>
+
 model: opus
 color: yellow
 tools: ["Task", "Read", "Write"]

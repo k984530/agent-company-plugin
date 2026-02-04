@@ -1,12 +1,16 @@
 ---
-name: critic
-description: |
-  Use this agent when you need critical review or counterarguments.
+name: debate-critic
+description: Use this agent when you need critical review or counterarguments. Examples:
 
-  <example>
-  user: "이 주장의 문제점을 찾아줘"
-  assistant: "critic 에이전트를 사용하여 비판적 검토를 수행합니다."
-  </example>
+<example>
+Context: User wants critical review
+user: "이 주장의 문제점을 찾아줘"
+assistant: "critic 에이전트를 사용하여 비판적 검토를 수행합니다."
+<commentary>
+User needs critical analysis, trigger critic agent.
+</commentary>
+</example>
+
 model: opus
 color: yellow
 tools: ["Read", "Write"]

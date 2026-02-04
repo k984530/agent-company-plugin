@@ -1,12 +1,16 @@
 ---
-name: copywriter
-description: |
-  Use this agent when you need marketing copy or text content.
+name: marketing-copywriter
+description: Use this agent when you need marketing copy or text content. Examples:
 
-  <example>
-  user: "광고 카피를 작성해줘"
-  assistant: "copywriter 에이전트를 사용하여 카피를 작성합니다."
-  </example>
+<example>
+Context: User wants advertising copy
+user: "광고 카피를 작성해줘"
+assistant: "copywriter 에이전트를 사용하여 카피를 작성합니다."
+<commentary>
+User needs marketing copy, trigger copywriter agent.
+</commentary>
+</example>
+
 model: opus
 color: magenta
 tools: ["Read", "Write"]

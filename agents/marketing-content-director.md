@@ -1,12 +1,16 @@
 ---
-name: content-director
-description: |
-  Use this agent when you need to create content strategy.
+name: marketing-content-director
+description: Use this agent when you need to create content strategy. Examples:
 
-  <example>
-  user: "마케팅 콘텐츠 전략을 수립해줘"
-  assistant: "content-director 에이전트를 사용하여 콘텐츠 전략을 수립합니다."
-  </example>
+<example>
+Context: User wants content strategy
+user: "마케팅 콘텐츠 전략을 수립해줘"
+assistant: "content-director 에이전트를 사용하여 콘텐츠 전략을 수립합니다."
+<commentary>
+User needs content strategy, trigger content-director agent.
+</commentary>
+</example>
+
 model: opus
 color: magenta
 tools: ["Task", "Read", "Write"]

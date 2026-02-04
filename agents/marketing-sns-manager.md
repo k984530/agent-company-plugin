@@ -1,12 +1,16 @@
 ---
-name: sns-manager
-description: |
-  Use this agent when you need SNS content optimization.
+name: marketing-sns-manager
+description: Use this agent when you need SNS content optimization. Examples:
 
-  <example>
-  user: "인스타그램용 콘텐츠를 만들어줘"
-  assistant: "sns-manager 에이전트를 사용하여 SNS 콘텐츠를 최적화합니다."
-  </example>
+<example>
+Context: User wants SNS content
+user: "인스타그램용 콘텐츠를 만들어줘"
+assistant: "sns-manager 에이전트를 사용하여 SNS 콘텐츠를 최적화합니다."
+<commentary>
+User needs SNS optimization, trigger sns-manager agent.
+</commentary>
+</example>
+
 model: opus
 color: magenta
 tools: ["Read", "Write"]

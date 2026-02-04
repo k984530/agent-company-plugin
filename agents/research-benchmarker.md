@@ -1,12 +1,16 @@
 ---
-name: benchmarker
-description: |
-  Use this agent when you need competitive analysis or benchmarking.
+name: research-benchmarker
+description: Use this agent when you need competitive analysis or benchmarking. Examples:
 
-  <example>
-  user: "경쟁사 제품을 분석해줘"
-  assistant: "benchmarker 에이전트를 사용하여 경쟁사 벤치마킹을 수행합니다."
-  </example>
+<example>
+Context: User wants competitive analysis
+user: "경쟁사 제품을 분석해줘"
+assistant: "benchmarker 에이전트를 사용하여 경쟁사 벤치마킹을 수행합니다."
+<commentary>
+User needs competitive benchmarking, trigger benchmarker agent.
+</commentary>
+</example>
+
 model: opus
 color: cyan
 tools: ["WebSearch", "WebFetch", "Read", "Write"]

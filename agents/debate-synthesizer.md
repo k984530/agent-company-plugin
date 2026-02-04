@@ -1,12 +1,16 @@
 ---
-name: synthesizer
-description: |
-  Use this agent when you need to synthesize opinions and draw conclusions.
+name: debate-synthesizer
+description: Use this agent when you need to synthesize opinions and draw conclusions. Examples:
 
-  <example>
-  user: "모든 의견을 종합해서 결론을 내줘"
-  assistant: "synthesizer 에이전트를 사용하여 의견을 종합합니다."
-  </example>
+<example>
+Context: User wants to synthesize opinions
+user: "모든 의견을 종합해서 결론을 내줘"
+assistant: "synthesizer 에이전트를 사용하여 의견을 종합합니다."
+<commentary>
+User needs opinion synthesis, trigger synthesizer agent.
+</commentary>
+</example>
+
 model: opus
 color: yellow
 tools: ["Read", "Write"]

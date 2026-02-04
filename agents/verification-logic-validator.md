@@ -1,12 +1,16 @@
 ---
-name: logic-validator
-description: |
-  Use this agent when you need to validate logical consistency.
+name: verification-logic-validator
+description: Use this agent when you need to validate logical consistency. Examples:
 
-  <example>
-  user: "이 논증의 논리적 오류를 찾아줘"
-  assistant: "logic-validator 에이전트를 사용하여 논리적 일관성을 검증합니다."
-  </example>
+<example>
+Context: User wants to find logical errors
+user: "이 논증의 논리적 오류를 찾아줘"
+assistant: "logic-validator 에이전트를 사용하여 논리적 일관성을 검증합니다."
+<commentary>
+User needs logic validation, trigger logic-validator agent.
+</commentary>
+</example>
+
 model: opus
 color: green
 tools: ["Read", "Write"]

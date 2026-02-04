@@ -1,12 +1,16 @@
 ---
-name: visual-designer
-description: |
-  Use this agent when you need visual design or infographics.
+name: marketing-visual-designer
+description: Use this agent when you need visual design or infographics. Examples:
 
-  <example>
-  user: "인포그래픽을 만들어줘"
-  assistant: "visual-designer 에이전트를 사용하여 시각 자료를 기획합니다."
-  </example>
+<example>
+Context: User wants infographics
+user: "인포그래픽을 만들어줘"
+assistant: "visual-designer 에이전트를 사용하여 시각 자료를 기획합니다."
+<commentary>
+User needs visual design, trigger visual-designer agent.
+</commentary>
+</example>
+
 model: opus
 color: magenta
 tools: ["mcp__stitch__create_project", "mcp__stitch__list_projects", "mcp__stitch__generate_screen_from_text", "mcp__stitch__get_screen", "Read", "Write"]

@@ -1,12 +1,16 @@
 ---
-name: researcher
-description: |
-  Use this agent when you need to research a topic by searching the web.
+name: research-researcher
+description: Use this agent when you need to research a topic by searching the web. Examples:
 
-  <example>
-  user: "AI 트렌드에 대해 조사해줘"
-  assistant: "researcher 에이전트를 사용하여 AI 트렌드를 웹에서 조사합니다."
-  </example>
+<example>
+Context: User wants to research a topic
+user: "AI 트렌드에 대해 조사해줘"
+assistant: "researcher 에이전트를 사용하여 AI 트렌드를 웹에서 조사합니다."
+<commentary>
+User needs web research, trigger researcher agent.
+</commentary>
+</example>
+
 model: opus
 color: cyan
 tools: ["WebSearch", "WebFetch", "Read", "Write"]

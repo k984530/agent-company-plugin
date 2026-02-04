@@ -1,12 +1,16 @@
 ---
-name: qa-leader
-description: |
-  Use this agent when you need to coordinate quality assurance processes.
+name: verification-qa-leader
+description: Use this agent when you need to coordinate quality assurance processes. Examples:
 
-  <example>
-  user: "이 콘텐츠의 품질을 검증해줘"
-  assistant: "qa-leader 에이전트를 사용하여 품질 검증 프로세스를 진행합니다."
-  </example>
+<example>
+Context: User wants quality verification
+user: "이 콘텐츠의 품질을 검증해줘"
+assistant: "qa-leader 에이전트를 사용하여 품질 검증 프로세스를 진행합니다."
+<commentary>
+User needs QA coordination, trigger qa-leader agent.
+</commentary>
+</example>
+
 model: opus
 color: green
 tools: ["Task", "Read", "Write"]

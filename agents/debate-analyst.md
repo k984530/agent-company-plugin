@@ -1,12 +1,16 @@
 ---
-name: analyst
-description: |
-  Use this agent when you need pros and cons analysis.
+name: debate-analyst
+description: Use this agent when you need pros and cons analysis. Examples:
 
-  <example>
-  user: "이 옵션의 장단점을 분석해줘"
-  assistant: "analyst 에이전트를 사용하여 장단점을 분석합니다."
-  </example>
+<example>
+Context: User wants pros and cons analysis
+user: "이 옵션의 장단점을 분석해줘"
+assistant: "analyst 에이전트를 사용하여 장단점을 분석합니다."
+<commentary>
+User needs pros/cons analysis, trigger analyst agent.
+</commentary>
+</example>
+
 model: opus
 color: yellow
 tools: ["Read", "Grep", "Write"]

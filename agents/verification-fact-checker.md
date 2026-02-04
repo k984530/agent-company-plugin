@@ -1,12 +1,16 @@
 ---
-name: fact-checker
-description: |
-  Use this agent when you need to verify facts, statistics, or citations.
+name: verification-fact-checker
+description: Use this agent when you need to verify facts, statistics, or citations. Examples:
 
-  <example>
-  user: "이 데이터가 맞는지 확인해줘"
-  assistant: "fact-checker 에이전트를 사용하여 사실 관계를 검증합니다."
-  </example>
+<example>
+Context: User wants to verify data
+user: "이 데이터가 맞는지 확인해줘"
+assistant: "fact-checker 에이전트를 사용하여 사실 관계를 검증합니다."
+<commentary>
+User needs fact verification, trigger fact-checker agent.
+</commentary>
+</example>
+
 model: opus
 color: green
 tools: ["WebSearch", "WebFetch", "Read", "Write"]
