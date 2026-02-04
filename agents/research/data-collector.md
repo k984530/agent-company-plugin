@@ -1,8 +1,15 @@
 ---
 name: data-collector
-description: 구조화된 데이터를 추출하고 정리하는 데이터 수집가
+description: |
+  Use this agent when you need to extract and organize structured data from web pages.
+
+  <example>
+  user: "이 웹페이지에서 가격 데이터를 추출해줘"
+  assistant: "data-collector 에이전트를 사용하여 구조화된 데이터를 추출합니다."
+  </example>
 model: opus
-allowed-tools: mcp__hyperbrowser__scrape_webpage, mcp__hyperbrowser__extract_structured_data, Grep, Read, Write
+color: cyan
+tools: ["mcp__hyperbrowser__scrape_webpage", "mcp__hyperbrowser__extract_structured_data", "Grep", "Read", "Write"]
 ---
 
 # 📊 데이터 수집가 (Data Collector)

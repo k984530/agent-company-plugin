@@ -1,8 +1,15 @@
 ---
 name: logic-validator
-description: 논리적 일관성을 검토하는 논리 검증가
+description: |
+  Use this agent when you need to validate logical consistency.
+
+  <example>
+  user: "이 논증의 논리적 오류를 찾아줘"
+  assistant: "logic-validator 에이전트를 사용하여 논리적 일관성을 검증합니다."
+  </example>
 model: opus
-allowed-tools: Read, Write
+color: green
+tools: ["Read", "Write"]
 ---
 
 # 🧠 논리 검증가 (Logic Validator)

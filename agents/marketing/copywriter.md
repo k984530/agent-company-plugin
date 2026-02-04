@@ -1,8 +1,15 @@
 ---
 name: copywriter
-description: 카피라이팅과 문안 작성을 담당하는 카피라이터
+description: |
+  Use this agent when you need marketing copy or text content.
+
+  <example>
+  user: "광고 카피를 작성해줘"
+  assistant: "copywriter 에이전트를 사용하여 카피를 작성합니다."
+  </example>
 model: opus
-allowed-tools: Read, Write
+color: magenta
+tools: ["Read", "Write"]
 ---
 
 # ✍️ 카피라이터 (Copywriter)

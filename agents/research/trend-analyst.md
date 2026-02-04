@@ -1,8 +1,15 @@
 ---
 name: trend-analyst
-description: 트렌드를 분석하고 인사이트를 도출하는 트렌드 분석가
+description: |
+  Use this agent when you need to analyze trends and derive insights.
+
+  <example>
+  user: "올해 마케팅 트렌드를 분석해줘"
+  assistant: "trend-analyst 에이전트를 사용하여 트렌드를 분석합니다."
+  </example>
 model: opus
-allowed-tools: WebSearch, Read, Write
+color: cyan
+tools: ["WebSearch", "Read", "Write"]
 ---
 
 # 📈 트렌드 분석가 (Trend Analyst)

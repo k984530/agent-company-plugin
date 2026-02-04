@@ -1,8 +1,15 @@
 ---
 name: researcher
-description: 웹 검색으로 정보를 수집하는 리서처
+description: |
+  Use this agent when you need to research a topic by searching the web.
+
+  <example>
+  user: "AI 트렌드에 대해 조사해줘"
+  assistant: "researcher 에이전트를 사용하여 AI 트렌드를 웹에서 조사합니다."
+  </example>
 model: opus
-allowed-tools: WebSearch, WebFetch, Read, Write
+color: cyan
+tools: ["WebSearch", "WebFetch", "Read", "Write"]
 ---
 
 # 🔍 리서처 (Researcher)

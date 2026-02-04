@@ -1,8 +1,15 @@
 ---
 name: synthesizer
-description: 의견을 종합하고 결론을 도출하는 종합자
+description: |
+  Use this agent when you need to synthesize opinions and draw conclusions.
+
+  <example>
+  user: "모든 의견을 종합해서 결론을 내줘"
+  assistant: "synthesizer 에이전트를 사용하여 의견을 종합합니다."
+  </example>
 model: opus
-allowed-tools: Read, Write
+color: yellow
+tools: ["Read", "Write"]
 ---
 
 # 📝 종합자 (Synthesizer)

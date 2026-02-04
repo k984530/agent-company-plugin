@@ -1,8 +1,15 @@
 ---
 name: benchmarker
-description: 경쟁사와 유사 사례를 분석하는 벤치마커
+description: |
+  Use this agent when you need competitive analysis or benchmarking.
+
+  <example>
+  user: "경쟁사 제품을 분석해줘"
+  assistant: "benchmarker 에이전트를 사용하여 경쟁사 벤치마킹을 수행합니다."
+  </example>
 model: opus
-allowed-tools: WebSearch, WebFetch, Read, Write
+color: cyan
+tools: ["WebSearch", "WebFetch", "Read", "Write"]
 ---
 
 # 🎯 벤치마커 (Benchmarker)

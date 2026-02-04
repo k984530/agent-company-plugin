@@ -1,8 +1,15 @@
 ---
 name: visual-designer
-description: 시각 자료를 기획하고 디자인하는 비주얼 디자이너
+description: |
+  Use this agent when you need visual design or infographics.
+
+  <example>
+  user: "인포그래픽을 만들어줘"
+  assistant: "visual-designer 에이전트를 사용하여 시각 자료를 기획합니다."
+  </example>
 model: opus
-allowed-tools: mcp__stitch__create_project, mcp__stitch__list_projects, mcp__stitch__generate_screen_from_text, mcp__stitch__get_screen, Read, Write
+color: magenta
+tools: ["mcp__stitch__create_project", "mcp__stitch__list_projects", "mcp__stitch__generate_screen_from_text", "mcp__stitch__get_screen", "Read", "Write"]
 ---
 
 # 🎨 비주얼 디자이너 (Visual Designer)

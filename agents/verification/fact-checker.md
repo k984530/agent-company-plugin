@@ -1,8 +1,15 @@
 ---
 name: fact-checker
-description: 사실 관계를 확인하는 팩트체커
+description: |
+  Use this agent when you need to verify facts, statistics, or citations.
+
+  <example>
+  user: "이 데이터가 맞는지 확인해줘"
+  assistant: "fact-checker 에이전트를 사용하여 사실 관계를 검증합니다."
+  </example>
 model: opus
-allowed-tools: WebSearch, WebFetch, Read, Write
+color: green
+tools: ["WebSearch", "WebFetch", "Read", "Write"]
 ---
 
 # 🔎 팩트체커 (Fact Checker)

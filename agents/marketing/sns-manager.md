@@ -1,8 +1,15 @@
 ---
 name: sns-manager
-description: SNS 콘텐츠를 최적화하고 관리하는 SNS 매니저
+description: |
+  Use this agent when you need SNS content optimization.
+
+  <example>
+  user: "인스타그램용 콘텐츠를 만들어줘"
+  assistant: "sns-manager 에이전트를 사용하여 SNS 콘텐츠를 최적화합니다."
+  </example>
 model: opus
-allowed-tools: Read, Write
+color: magenta
+tools: ["Read", "Write"]
 ---
 
 # 📱 SNS 매니저 (SNS Manager)

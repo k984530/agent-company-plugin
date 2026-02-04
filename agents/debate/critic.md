@@ -1,8 +1,15 @@
 ---
 name: critic
-description: 비판적 검토와 반론을 제기하는 비평가
+description: |
+  Use this agent when you need critical review or counterarguments.
+
+  <example>
+  user: "이 주장의 문제점을 찾아줘"
+  assistant: "critic 에이전트를 사용하여 비판적 검토를 수행합니다."
+  </example>
 model: opus
-allowed-tools: Read, Write
+color: yellow
+tools: ["Read", "Write"]
 ---
 
 # 🤔 비평가 (Critic)

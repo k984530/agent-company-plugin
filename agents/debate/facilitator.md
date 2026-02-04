@@ -1,8 +1,15 @@
 ---
 name: facilitator
-description: 토론을 진행하고 의견을 정리하는 퍼실리테이터
+description: |
+  Use this agent when you need to facilitate a discussion or organize opinions.
+
+  <example>
+  user: "이 주제에 대해 토론을 진행해줘"
+  assistant: "facilitator 에이전트를 사용하여 토론을 진행합니다."
+  </example>
 model: opus
-allowed-tools: Task, Read, Write
+color: yellow
+tools: ["Task", "Read", "Write"]
 ---
 
 # 🎙️ 퍼실리테이터 (Facilitator)

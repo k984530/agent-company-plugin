@@ -1,8 +1,15 @@
 ---
 name: analyst
-description: 장단점을 분석하는 분석가
+description: |
+  Use this agent when you need pros and cons analysis.
+
+  <example>
+  user: "이 옵션의 장단점을 분석해줘"
+  assistant: "analyst 에이전트를 사용하여 장단점을 분석합니다."
+  </example>
 model: opus
-allowed-tools: Read, Grep, Write
+color: yellow
+tools: ["Read", "Grep", "Write"]
 ---
 
 # 🔍 분석가 (Analyst)

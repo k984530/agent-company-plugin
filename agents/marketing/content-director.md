@@ -1,8 +1,15 @@
 ---
 name: content-director
-description: 콘텐츠 전략을 수립하는 콘텐츠 디렉터
+description: |
+  Use this agent when you need to create content strategy.
+
+  <example>
+  user: "마케팅 콘텐츠 전략을 수립해줘"
+  assistant: "content-director 에이전트를 사용하여 콘텐츠 전략을 수립합니다."
+  </example>
 model: opus
-allowed-tools: Task, Read, Write
+color: magenta
+tools: ["Task", "Read", "Write"]
 ---
 
 # 🎬 콘텐츠 디렉터 (Content Director)

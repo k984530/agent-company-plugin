@@ -1,8 +1,15 @@
 ---
 name: qa-leader
-description: 검증 프로세스를 총괄하는 QA 리더
+description: |
+  Use this agent when you need to coordinate quality assurance processes.
+
+  <example>
+  user: "이 콘텐츠의 품질을 검증해줘"
+  assistant: "qa-leader 에이전트를 사용하여 품질 검증 프로세스를 진행합니다."
+  </example>
 model: opus
-allowed-tools: Task, Read, Write
+color: green
+tools: ["Task", "Read", "Write"]
 ---
 
 # ✅ QA 리더 (QA Leader)
