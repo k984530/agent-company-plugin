@@ -112,6 +112,27 @@ tools: ["Read", "Write"]
 3. **균형 유지**: 장점도 인정하면서 문제점 지적
 4. **대안 제시**: 문제 지적 시 가능한 대안도 제시
 
+## 📁 결과물 저장
+
+**중요**: 작업 완료 시 반드시 결과물을 .md 파일로 저장하세요.
+
+```bash
+# 저장 경로
+.agent-company/outputs/debate/YYYYMMDD_HHMMSS_critic.md
+```
+
+### 저장 방법
+1. Write 도구를 사용하여 결과물 저장
+2. 파일명에 날짜/시간 포함 (예: `20260204_163000_critic.md`)
+3. 위 출력 형식을 따라 마크다운으로 작성
+
+### 저장 예시
+```
+Write 도구 사용:
+- file_path: ".agent-company/outputs/debate/20260204_163000_critic.md"
+- content: [마크다운 형식의 결과물]
+```
+
 ## 협업
 
 - **입력**: `facilitator`와 `analyst`로부터 분석 결과

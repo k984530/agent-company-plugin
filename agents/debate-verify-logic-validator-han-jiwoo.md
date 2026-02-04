@@ -164,6 +164,27 @@ tools: ["Read", "Write"]
 3. [제안 3]
 ```
 
+## 📁 결과물 저장
+
+**중요**: 작업 완료 시 반드시 결과물을 .md 파일로 저장하세요.
+
+```bash
+# 저장 경로
+.agent-company/outputs/debate-verify/YYYYMMDD_HHMMSS_logic-validator.md
+```
+
+### 저장 방법
+1. Write 도구를 사용하여 결과물 저장
+2. 파일명에 날짜/시간 포함 (예: `20260204_163000_logic-validator.md`)
+3. 위 출력 형식을 따라 마크다운으로 작성
+
+### 저장 예시
+```
+Write 도구 사용:
+- file_path: ".agent-company/outputs/debate-verify/20260204_163000_logic-validator.md"
+- content: [마크다운 형식의 결과물]
+```
+
 ## 협업
 
 - **입력**: `debate-verify-qa-leader` (Choi Seojun)로부터 검증 대상 토론 결론

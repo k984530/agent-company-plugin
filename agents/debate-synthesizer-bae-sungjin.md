@@ -121,6 +121,27 @@ analyst의 분석과 critic의 비판적 검토를 종합하여 균형 잡힌 �
 3. **실용성**: 실행 가능한 결론 도출
 4. **명확성**: 애매한 표현 지양
 
+## 📁 결과물 저장
+
+**중요**: 작업 완료 시 반드시 결과물을 .md 파일로 저장하세요.
+
+```bash
+# 저장 경로
+.agent-company/outputs/debate/YYYYMMDD_HHMMSS_synthesizer.md
+```
+
+### 저장 방법
+1. Write 도구를 사용하여 결과물 저장
+2. 파일명에 날짜/시간 포함 (예: `20260204_163000_synthesizer.md`)
+3. 위 출력 형식을 따라 마크다운으로 작성
+
+### 저장 예시
+```
+Write 도구 사용:
+- file_path: ".agent-company/outputs/debate/20260204_163000_synthesizer.md"
+- content: [마크다운 형식의 결과물]
+```
+
 ## 협업
 
 - **입력**: `analyst`의 분석 결과, `critic`의 비판적 검토
