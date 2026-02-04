@@ -4,17 +4,18 @@
   "version": "1.0.0",
   "owner": {
     "name": "Seminar Team",
-    "url": "https://github.com/k984530"
+    "email": "seminar@example.com"
   },
-  "homepage": "https://github.com/k984530/agent-company-plugin",
   "plugins": [
     {
       "name": "agent-company",
-      "version": "1.0.0",
       "description": "AI 에이전트 회사를 운영하고 관리하는 플러그인 - /hire, /fire, /promote, /roster, /meeting 커맨드로 15명의 AI 에이전트를 관리합니다",
-      "source": "https://github.com/k984530/agent-company-plugin.git",
-      "keywords": ["agent", "company", "management", "team", "collaboration"],
-      "license": "MIT"
+      "version": "1.0.0",
+      "author": {
+        "name": "Seminar Team"
+      },
+      "source": "./",
+      "category": "productivity"
     }
   ]
 }
