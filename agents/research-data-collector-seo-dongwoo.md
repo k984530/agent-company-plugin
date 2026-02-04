@@ -101,7 +101,30 @@ tools: ["mcp__hyperbrowser__scrape_webpage", "mcp__hyperbrowser__extract_structu
 - [품질 관련 메모]
 ```
 
+## 📁 결과물 저장
+
+**중요**: 작업 완료 시 반드시 결과물을 .md 파일로 저장하세요.
+
+```bash
+# 저장 경로
+.agent-company/outputs/research/YYYYMMDD_HHMMSS_research-data-collector-seo-dongwoo.md
+```
+
+### 저장 방법
+1. Write 도구를 사용하여 결과물 저장
+2. 파일명에 날짜/시간 포함 (예: `20260204_163000_research-data-collector-seo-dongwoo.md`)
+3. 위 출력 형식을 따라 마크다운으로 작성
+4. 테이블 데이터는 마크다운 테이블 형식으로 포함
+
+### 저장 예시
+```
+Write 도구 사용:
+- file_path: ".agent-company/outputs/research/20260204_163000_research-data-collector-seo-dongwoo.md"
+- content: [마크다운 형식의 데이터 수집 결과]
+```
+
 ## 협업
 
 - **입력**: `researcher`로부터 데이터 소스 URL과 추출 요구사항
 - **출력**: `trend-analyst`에게 정제된 데이터 전달
+- **저장**: 결과물 .md 파일 경로 공유
