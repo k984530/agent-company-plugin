@@ -1,9 +1,8 @@
 {
-  "$schema": "https://claude.ai/schemas/marketplace.json",
-  "name": "Agent Company Marketplace",
+  "name": "agent-company-marketplace",
   "description": "AI 에이전트 회사 플러그인 모음 - 비개발자도 자연어로 에이전트를 관리할 수 있습니다",
   "version": "1.0.0",
-  "author": {
+  "owner": {
     "name": "Seminar Team",
     "url": "https://github.com/k984530"
   },
@@ -13,21 +12,9 @@
       "name": "agent-company",
       "version": "1.0.0",
       "description": "AI 에이전트 회사를 운영하고 관리하는 플러그인 - /hire, /fire, /promote, /roster, /meeting 커맨드로 15명의 AI 에이전트를 관리합니다",
-      "source": {
-        "type": "git",
-        "url": "https://github.com/k984530/agent-company-plugin.git",
-        "branch": "main"
-      },
-      "keywords": ["agent", "company", "management", "team", "collaboration", "non-developer", "natural-language"],
-      "license": "MIT",
-      "features": [
-        "4개 팀 (조사/토론/검증/마케팅), 15명 AI 에이전트 구성",
-        "/roster - 팀 현황 조회",
-        "/hire - 새 에이전트 고용",
-        "/fire - 에이전트 해고",
-        "/promote - 에이전트 역할/모델 변경",
-        "/meeting - 팀 회의 소집 및 협업"
-      ]
+      "source": "https://github.com/k984530/agent-company-plugin.git",
+      "keywords": ["agent", "company", "management", "team", "collaboration"],
+      "license": "MIT"
     }
   ]
 }
