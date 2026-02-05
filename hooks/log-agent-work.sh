@@ -57,7 +57,7 @@ if [ -n "$RESULT" ] && [ "$RESULT" != "null" ] && [ ${#RESULT} -gt 50 ]; then
     # 팀별 이모지 결정
     case "$TEAM" in
         research) EMOJI="🔍" ;;
-        debate) EMOJI="💬" ;;
+        strategy) EMOJI="📊" ;;
         marketing) EMOJI="📢" ;;
         *verify*) EMOJI="✅" ;;
         hr) EMOJI="👔" ;;

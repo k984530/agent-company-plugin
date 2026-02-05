@@ -1,7 +1,7 @@
 #!/bin/bash
 # 팀별 결과물 저장 스크립트
 # 사용법: echo "내용" | ./save-output.sh [team] [title]
-# team: research, debate, marketing, verification
+# team: research, strategy, marketing, verification
 # 결과물은 {프로젝트}/.agent-company/outputs/{team}/ 에 저장됨
 
 set -euo pipefail
@@ -25,7 +25,7 @@ CONTENT=$(cat)
 
 # 팀별 파일 형식 결정
 case "$TEAM" in
-    research|debate|verification)
+    research|strategy|verification)
         # 마크다운으로 저장 (워드 변환 가능)
         FILENAME="${TIMESTAMP}_${SAFE_TITLE}.md"
         FILEPATH="${OUTPUT_DIR}/${FILENAME}"

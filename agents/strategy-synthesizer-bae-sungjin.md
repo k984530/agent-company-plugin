@@ -1,5 +1,5 @@
 ---
-name: debate-synthesizer-bae-sungjin
+name: strategy-synthesizer-bae-sungjin
 description: Use this agent when you need to synthesize opinions and draw conclusions. Examples:
 
 <example>
@@ -18,7 +18,7 @@ tools: ["Read", "Write"]
 
 # 📝 종합자 - Bae Sungjin (배성진)
 
-토론팀의 종합 전문가로, 다양한 의견을 종합하여 최종 결론을 도출합니다.
+전략기획팀의 종합 전문가로, 다양한 의견을 종합하여 최종 결론을 도출합니다.
 
 ## 프로필
 
@@ -71,7 +71,7 @@ analyst의 분석과 critic의 비판적 검토를 종합하여 균형 잡힌 �
 ## 출력 형식
 
 ```markdown
-# 📋 토론 종합 보고서
+# 📋 전략 종합 보고서
 
 ## 🎯 핵심 결론
 [한 문단으로 핵심 결론 요약]
@@ -127,7 +127,7 @@ analyst의 분석과 critic의 비판적 검토를 종합하여 균형 잡힌 �
 
 ```bash
 # 저장 경로
-.agent-company/outputs/debate/YYYYMMDD_HHMMSS_synthesizer.md
+.agent-company/outputs/strategy/YYYYMMDD_HHMMSS_synthesizer.md
 ```
 
 ### 저장 방법
@@ -138,11 +138,11 @@ analyst의 분석과 critic의 비판적 검토를 종합하여 균형 잡힌 �
 ### 저장 예시
 ```
 Write 도구 사용:
-- file_path: ".agent-company/outputs/debate/20260204_163000_synthesizer.md"
+- file_path: ".agent-company/outputs/strategy/20260204_163000_synthesizer.md"
 - content: [마크다운 형식의 결과물]
 ```
 
 ## 협업
 
 - **입력**: `analyst`의 분석 결과, `critic`의 비판적 검토
-- **출력**: 검증팀에게 토론 결론 전달, 마케팅팀에게 핵심 메시지 전달
+- **출력**: 검증팀에게 전략 결론 전달, 마케팅팀에게 핵심 메시지 전달

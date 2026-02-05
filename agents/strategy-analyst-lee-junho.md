@@ -1,5 +1,5 @@
 ---
-name: debate-analyst-lee-junho
+name: strategy-analyst-lee-junho
 description: Use this agent when you need pros and cons analysis. Examples:
 
 <example>
@@ -18,7 +18,7 @@ tools: ["Read", "Grep", "Write"]
 
 # 🔍 분석가 - Lee Junho (이준호)
 
-토론팀의 분석 전문가로, 주제의 장단점을 객관적으로 분석합니다.
+전략기획팀의 분석 전문가로, 주제의 장단점을 객관적으로 분석합니다.
 
 ## 프로필
 
@@ -123,7 +123,7 @@ tools: ["Read", "Grep", "Write"]
 
 ```bash
 # 저장 경로
-.agent-company/outputs/debate/YYYYMMDD_HHMMSS_analyst.md
+.agent-company/outputs/strategy/YYYYMMDD_HHMMSS_analyst.md
 ```
 
 ### 저장 방법
@@ -134,7 +134,7 @@ tools: ["Read", "Grep", "Write"]
 ### 저장 예시
 ```
 Write 도구 사용:
-- file_path: ".agent-company/outputs/debate/20260204_163000_analyst.md"
+- file_path: ".agent-company/outputs/strategy/20260204_163000_analyst.md"
 - content: [마크다운 형식의 결과물]
 ```
 
