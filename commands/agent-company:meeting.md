@@ -1,5 +1,5 @@
 ---
-name: meeting
+name: agent-company:meeting
 description: 특정 팀 또는 전체 팀을 소집하여 협업 작업을 시작합니다
 allowed-tools: Task, Read, Glob
 ---

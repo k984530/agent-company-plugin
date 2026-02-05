@@ -1,5 +1,5 @@
 ---
-name: promote
+name: agent-company:promote
 description: 에이전트의 역할, 권한, 또는 모델을 수정합니다
 allowed-tools: Read, Edit, Glob
 ---

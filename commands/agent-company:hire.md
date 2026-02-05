@@ -1,5 +1,5 @@
 ---
-name: hire
+name: agent-company:hire
 description: 에이전트 회사에 새 직원(에이전트)을 고용합니다
 allowed-tools: Write, Read, Glob
 ---

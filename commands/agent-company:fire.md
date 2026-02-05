@@ -1,5 +1,5 @@
 ---
-name: fire
+name: agent-company:fire
 description: 에이전트 회사에서 직원(에이전트)을 해고합니다
 allowed-tools: Bash, Read, Glob
 ---
