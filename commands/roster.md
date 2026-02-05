@@ -8,12 +8,25 @@ allowed-tools: Read, Glob
 
 에이전트 회사의 현재 인원 현황을 **실제 파일을 읽어서** 동적으로 표시합니다.
 
+## 플러그인 경로
+**중요**: 에이전트 파일은 플러그인 디렉토리에 있습니다.
+```
+플러그인 루트: ${CLAUDE_PLUGIN_ROOT}
+에이전트 경로: ${CLAUDE_PLUGIN_ROOT}/agents/
+```
+
 ## 실행 단계
 
 ### 1단계: 에이전트 파일 검색
 ```
-Glob 도구 사용: agents/*.md
+Glob 도구 사용:
+- pattern: "*.md"
+- path: "${CLAUDE_PLUGIN_ROOT}/agents"
 ```
+
+**주의**: 반드시 path 파라미터에 플러그인의 agents 폴더 경로를 지정하세요!
+- 올바른 예: path="/Users/.../agent-company-plugin/agents"
+- 잘못된 예: 현재 작업 디렉토리의 agents/ (존재하지 않음)
 
 ### 2단계: 팀별 분류
 파일명 패턴으로 팀 구분:
